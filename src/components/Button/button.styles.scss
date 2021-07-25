@@ -1,0 +1,37 @@
+$main-green: #00b548;
+
+button {
+    padding: 30px;
+    height: 6vh;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    border-radius: 25px;
+    font-size: 2rem;
+    line-height: 0rem;
+    width: auto;
+    margin: auto;
+    background-color: whitesmoke;
+    color: $main-green;
+    box-shadow: 5px 5px 50px rgba(0,0,0, .5);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    border: none;
+
+    &:hover{
+        background-color: rgba(245,245,245, .8);
+        cursor: pointer;
+    }
+
+    &:active{
+        top: 1px;
+        position: relative;
+    }
+}
+
+.small {
+    font-size: 1rem;
+    height: auto;
+    padding: 15px;
+    box-shadow: none;
+    border: 1px solid rgba(0,0,0, .5);
+}
