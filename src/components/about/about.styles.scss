@@ -1,0 +1,53 @@
+$phone-width: 414px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media (max-width: #{$tablet-width - 1}) {
+    @content;
+  }
+}
+
+.about-container{
+    background-color: rgba(0,181,72, .2);
+    padding: 5% 5% 2.5% 5%;
+
+}
+
+.about-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+
+   .text, .video{
+        padding: 2.5%
+    }
+
+    @include tablet {
+        flex-direction: column;
+    }
+
+    @include phone {
+        flex-direction: column;
+    }
+}
+
+iframe {
+  @include phone{
+    height: 225px;
+    width: 400px;
+  } 
+}
+
+.awards {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 2.5%;
+}

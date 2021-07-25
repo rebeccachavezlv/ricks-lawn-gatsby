@@ -1,0 +1,72 @@
+$phone-width: 414px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media (max-width: #{$tablet-width - 1}) {
+    @content;
+  }
+}
+
+.contact-section{
+  background-color: whitesmoke;
+  height: auto;
+  border-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  & p {
+      font-weight: 400;
+  }
+}
+
+.contactForm{
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.buttonContainer{
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+input {
+    height: 30px;
+
+}
+
+textarea {
+    resize:none;
+    height: 200px;
+}
+
+input, textarea {
+    width: 30vw;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+
+    @include phone {
+        width: 90vw;
+    }
+
+    @include tablet {
+        width: 45vw;
+    }
+}
+
+.form-button{
+  padding: 10px;
+}
+

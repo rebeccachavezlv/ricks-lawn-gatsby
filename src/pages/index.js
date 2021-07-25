@@ -3,7 +3,9 @@ import { useStaticQuery, graphql } from 'gatsby'
 import Navigation from '../components/navigation/navigation.component'
 import Hero from '../components/hero/hero.component'
 import Gallery from '../components/gallery/gallery.component'
-import ImageTest from '../components/image-test/image-test.component'
+import About from '../components/about/about.component'
+import InfoSection from "../components/info-section/info-section.component"
+import ContactForm from '../components/contact/contact-form.component'
 import './index.css'
 
 const IndexPage = () => {
@@ -19,9 +21,11 @@ const IndexPage = () => {
   return (
     <main id='top'>
       <Navigation />
-      {/* <ImageTest imageList={imageList.datoCmsImageGallery.photos} /> */}
       <Hero />
+      <About />
       <Gallery imageList={imageList.datoCmsImageGallery.photos}/>
+      <InfoSection />
+      <ContactForm />
     </main>
   )
 }
