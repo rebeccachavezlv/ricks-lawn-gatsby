@@ -1,5 +1,27 @@
+$phone-width: 414px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media (max-width: #{$tablet-width - 1}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+    @media (min-width: #{$tablet-width + 1}) {
+        @content;
+    }
+}
+
 .navigation{
-    width: 100%;
+    width: 100vw;
     height: 12vh;
     background-color: white;
     position: -webkit-sticky;
@@ -16,12 +38,14 @@
         scale: 33%;
         margin-left: 0%;
         cursor: pointer;
+        width: 100px;
+        padding-right: 100px;
     }
 
     .nav-links-text{
         width: 100%;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-around;
         font-weight: bold;
         font-size: 1.5rem;
         color: #00b548;
@@ -33,6 +57,22 @@
     }
 }
 
-// .nav-sidebar{
-//     padding-right: 15%;
-// }
+
+
+
+.nav-sidebar {
+    @include tablet {
+        display: none;
+    }
+    @include desktop {
+        display: none;
+    }
+}
+
+.nav-links-text{
+    div {
+        @include phone {
+            display: none;
+        }
+    }
+}

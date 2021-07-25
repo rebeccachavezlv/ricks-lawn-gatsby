@@ -25,7 +25,7 @@ class NavSidebar extends React.Component {
                 <Icon className='menu-icon' 
                     path={mdiMenu}
                     title="MENU"
-                    size={4}
+                    size={3}
                     onClick={this.handleSidebar}
                 /> 
 
