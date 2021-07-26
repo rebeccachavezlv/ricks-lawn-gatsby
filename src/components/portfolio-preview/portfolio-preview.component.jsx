@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, graphql, useStaticQuery } from 'gatsby'
 import { StaticImage } from "gatsby-plugin-image";
 import './portfolio-preview.styles.scss'
+import Button from '../Button/button.component';
 
 const PortfolioPreview = ({ imageList }) => {
 
@@ -39,7 +40,7 @@ const PortfolioPreview = ({ imageList }) => {
             </div>
 
             <div className='textSection'>
-                <Link className='portfolioLink' to='/portfolio'><h1>View our gallery!</h1></Link>
+                <Link className='portfolioLink' to='/portfolio'><Button title='View our gallery' /></Link>
             </div>
 
         </div>
