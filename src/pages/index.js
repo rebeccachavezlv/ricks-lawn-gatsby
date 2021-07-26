@@ -1,12 +1,10 @@
 import * as React from "react"
+import Layout from '../components/layout'
 import { useStaticQuery, graphql } from 'gatsby'
-import Navigation from '../components/navigation/navigation.component'
 import Hero from '../components/hero/hero.component'
-import Gallery from '../components/gallery/gallery.component'
 import About from '../components/about/about.component'
+import PortfolioPreview from '../components/portfolio-preview/portfolio-preview.component'
 import InfoSection from "../components/info-section/info-section.component"
-import ContactForm from '../components/contact/contact-form.component'
-import './index.css'
 
 const IndexPage = () => {
   const imageList = useStaticQuery(graphql`query {
@@ -19,14 +17,12 @@ const IndexPage = () => {
   )
 
   return (
-    <main id='top'>
-      <Navigation />
+    <Layout id='top'>
       <Hero />
       <About />
-      <Gallery imageList={imageList.datoCmsImageGallery.photos}/>
+      <PortfolioPreview imageList={imageList.datoCmsImageGallery.photos}/>
       <InfoSection />
-      <ContactForm />
-    </main>
+    </Layout>
   )
 }
 

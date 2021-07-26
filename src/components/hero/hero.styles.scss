@@ -15,6 +15,7 @@ $desktop-width: 1024px;
 }
 
 .hero {
+  position: relative;
     height: 88vh;
     width: 100vw;
     display: flex;
@@ -22,8 +23,8 @@ $desktop-width: 1024px;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-image: url("./BG_Hero.jpg");
-    background-size: cover;
+    // background-image: url("./BG_Hero.jpg");
+    // background-size: cover;
     padding-bottom: -40px;
 
     & .title {
@@ -46,3 +47,10 @@ $desktop-width: 1024px;
     padding-bottom: 10vh;
 }
 
+.bgHero{
+  position: absolute;
+  z-index: -3;
+  max-height: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}

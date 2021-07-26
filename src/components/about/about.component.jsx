@@ -1,9 +1,6 @@
 import React from 'react';
 import './about.styles.scss';
-
-import AngiesList from './images/angies-list.png'
-import BBB from './images/bbb.jpg'
-import WaterSmart from './images/water-smart.jpg'
+import { StaticImage } from 'gatsby-plugin-image'
 
 const About = () => (
     <div className='about-container' id='about'>
@@ -17,9 +14,9 @@ const About = () => (
             </div>
         </div>
         <div className='awards'>
-            <img src={AngiesList} alt=''></img>
-            <img src={BBB} alt=''></img>
-            <img src={WaterSmart} alt=''></img>
+            <StaticImage src='./images/angies-list.png' alt='' placeholder='blurred' height={100} objectFit='contain'></StaticImage>
+            <StaticImage src='./images/bbb.jpg' alt='' placeholder='blurred' height={100} objectFit='contain'></StaticImage>
+            <StaticImage src='./images/water-smart.jpg' alt='' placeholder='blurred' height={100} objectFit='contain'></StaticImage>
         </div>
     </div>
 );
